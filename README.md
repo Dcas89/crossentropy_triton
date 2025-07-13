@@ -48,7 +48,7 @@ pip install crossentropy-triton torch triton
 
 ```python
 import torch
-from src import CrossEntropyFunction
+from crossentropy_triton import CrossEntropyFunction
 
 device = torch.device('cuda')
 
@@ -69,7 +69,7 @@ print(f"Gradients computed - shape: {logits.grad.shape}")
 
 ```python
 import torch
-from src import TritonCausalLMLoss
+from crossentropy_triton import TritonCausalLMLoss
 
 device = torch.device('cuda')
 vocab_size = 32000
