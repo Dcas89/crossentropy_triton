@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="crossentropy-triton",
-    version="0.1.0",
+    version="0.1.1",
     author="Daniel Castillo",
     author_email="d.castillocastagneto@gmail.com",
     description="A high-performance, memory-efficient cross-entropy loss implementation using Triton for CUDA GPUs",
@@ -16,7 +16,8 @@ setup(
         "Bug Reports": "https://github.com/Dcas89/crossentropy-triton/issues",
         "Source": "https://github.com/Dcas89/crossentropy-triton",
     },
-    packages=find_packages(),
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
